@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guljar Hosen - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.5;
+            color: #1a1a1a;
+            background: white;
+            font-size: 13px;
+        }
+
+        .page {
+            width: 8.27in;
+            height: 11.69in;
+            margin: 0 auto 20px;
+            background: white;
+            padding: 0.5in;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            break-after: page;
+            overflow: hidden;
+        }
+
+        .page:last-child {
+            break-after: auto;
+            margin-bottom: 0;
+        }
+
+        /* Header Section */
+        /* Header Section */
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 45px; /* increased from 25px */
+            padding-bottom: 40px; /* increased from 20px */
+             border-bottom: 1px solid #6366f1;
+            gap: 35px; /* increased from 25px */
+        }
+
+        .profile-photo {
+            width: 130px; /* increased from 100px */
+            height: 130px; /* increased from 100px */
+            border-radius: 50%;
+            background: #f3f4f6;
+            border: 3px solid #6366f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #6b7280;
+            flex-shrink: 0;
+        }
+
+        .name {
+            font-size: 46px; /* increased from 36px */
+            font-weight: 300;
+            color: #111827;
+            margin-bottom: 8px; /* increased from 6px */
+            letter-spacing: -1px;
+        }
+
+        .job-title {
+            font-size: 16px; /* increased from 14px */
+            color: #6366f1;
+            margin-bottom: 20px; /* increased from 15px */
+            font-weight: 400;
+        }
+        .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* add gap between icon and text */
+}
+
+     .contact-grid {
+    display: flex;
+    gap: 30px; /* increased from 25px */
+    flex-wrap: wrap;
+    font-size: 14px; /* increased from 12px */
+    color: #4b5563;
+    align-items: center; /* add this for better alignment */
+}
+        /* Contact Icons */
+     .contact-icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: currentColor; /* add this to make icons visible */
+    flex-shrink: 0; /* prevent icon from shrinking */
+}
+
+        /* Section Styles */
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #6366f1;
+        }
+
+        /* About Section */
+        .about-text {
+            font-size: 13px;
+            line-height: 1.7;
+            color: #374151;
+            text-align: justify;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 18px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #6366f1;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 6px;
+        }
+
+        .job-info h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 2px;
+        }
+
+        .company {
+            font-size: 12px;
+            color: #6366f1;
+            font-weight: 400;
+        }
+
+        .job-period {
+            font-size: 12px;
+            color: #6b7280;
+            background: #f9fafb;
+            padding: 4px 12px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        .job-description {
+            font-size: 13px;
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .job-description ul {
+            margin-top: 8px;
+            padding-left: 20px;
+        }
+
+        .job-description li {
+            margin-bottom: 3px;
+            font-size: 12px;
+        }
+
+        /* Education Section */
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            background: #f8fafc;
+            border-radius: 0;
+            border-left: 3px solid #6366f1;
+        }
+
+        .edu-content h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 4px;
+        }
+
+        .edu-details {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .edu-period {
+            font-size: 12px;
+            color: #6b7280;
+            background: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        /* Skills Grid */
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .skill-category {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 0;
+            border-left: 3px solid #6366f1;
+        }
+
+        .skill-category h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 15px;
+        }
+
+        /* Skills with Progress Bars */
+        .technical-skill-category {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 0;
+        }
+
+        .skill-item {
+            margin-bottom: 10px;
+        }
+
+        .skill-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .skill-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .skill-percentage {
+            font-size: 11px;
+            color: #6366f1;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+
+        /* Projects Section */
+        .project-item {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 0;
+            border-left: 3px solid #6366f1;
+        }
+
+        .project-item h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .project-description {
+            font-size: 12px;
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 8px;
+        }
+
+        .tech-tag {
+            background: #6366f1;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 500;
+        }
+
+        .project-link {
+            font-size: 11px;
+            color: #6366f1;
+            text-decoration: none;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Portfolio Links */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .portfolio-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px;
+            background: #f8fafc;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #4b5563;
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+
+        .portfolio-item:hover {
+            background: #6366f1;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .portfolio-icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        .portfolio-name {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        /* Achievements */
+        .achievements-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .achievement-item {
+            padding: 12px 16px;
+            background: #f0f9ff;
+            border-radius: 6px;
+            border-left: 3px solid #0ea5e9;
+            font-size: 12px;
+            color: #0c4a6e;
+        }
+
+        .achievement-title {
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        /* Design Specializations Tags */
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: white;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 11px;
+            color: #4b5563;
+            border: 1px solid #e5e7eb;
+            font-weight: 500;
+        }
+
+        /* Print Styles */
+        @media print {
+            body { 
+                font-size: 12px;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+            
+            .page { 
+                box-shadow: none; 
+                margin-bottom: 0;
+                padding: 0.4in;
+                page-break-after: always;
+                break-after: page;
+                height: 11.69in;
+                width: 8.27in;
+            }
+            
+            .page:last-child {
+                page-break-after: auto;
+                break-after: auto;
+            }
+            
+            .name { font-size: 30px; }
+            .job-title { font-size: 12px; }
+            
+            @page {
+                margin: 0;
+                size: A4;
+            }
+            
+            /* Prevent elements from breaking across pages */
+            .experience-item,
+            .education-item,
+            .project-item,
+            .skill-category {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 900px) {
+            .contact-grid {
+                gap: 20px;
+            }
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1 -->
+    <div class="page">
+        <div class="header">
+            <div class="profile-photo">
+                <img src="/Users/bushraahmed/Downloads/gfrf 1.jpg" alt="Guljar Hosen" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            </div>
+            <div class="header-content">
+                <h1 class="name">Guljar Hosen</h1>
+                <div class="job-title">UI/UX Designer • Software Engineering Student • Founder</div>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        <span>hosguljar@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        <span>+880 1840642251</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        <span>guljarhosen.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">About Me</h2>
+            <p class="about-text">
+                From childhood, I've been passionate about technology and dreamed of working in tech. As a dedicated Figma specialist and Software Engineering student with 5+ years of design experience, I excel at creating pixel-perfect designs and comprehensive design systems. I transform complex problems into intuitive digital solutions using Figma's advanced features, collaborative workflows, and prototyping capabilities that drive measurable business results.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <div class="edu-content">
+                    <h3>Bachelor of Science in Software Engineering</h3>
+                    <div class="edu-details">Metropolitan University Sylhet, Bangladesh • 3rd Year Student</div>
+                </div>
+                <div class="edu-period">2023 - 2027</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-info">
+                        <h3>UI/UX Designer</h3>
+                        <div class="company">SEO Ocean (Remote - Boston)</div>
+                    </div>
+                    <div class="job-period">Dec 2024 - Present</div>
+                </div>
+                <div class="job-description">
+                    Contributing to major American company projects, creating data-driven design solutions.
+                    <ul>
+                        <li>Work on projects for major American companies</li>
+                        <li>Create user-centered design solutions</li>
+                        <li>Conduct user research and usability testing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-info">
+                        <h3>UI/UX Designer</h3>
+                        <div class="company">Freelance</div>
+                    </div>
+                    <div class="job-period">2021 - Present</div>
+                </div>
+                <div class="job-description">
+                    Specialized in creating intuitive digital experiences for SaaS, FinTech, B2B, and eCommerce applications.
+                    <ul>
+                        <li>Designed 100+ web and mobile applications</li>
+                        <li>Featured designer on Behance for exceptional work</li>
+                        <li>Built design systems and style guides</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-info">
+                        <h3>Graphic Designer</h3>
+                        <div class="company">Various Clients</div>
+                    </div>
+                    <div class="job-period">2019 - 2021</div>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Started career creating visual identities, logos, and brand systems</li>
+                        <li>Enhanced understanding of visual communication principles</li>
+                        <li>Developed expertise in typography, color theory, and composition</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page">
+        <div class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="technical-skill-category">
+                    <h3>Design & Development Tools</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Figma</span>
+                            <span class="skill-percentage">100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Adobe Photoshop</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Adobe Illustrator</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="technical-skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Framer</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML/CSS</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">WordPress</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Key Projects</h2>
+            <div class="project-item">
+                <h3>SaaS Platform Design Portfolio</h3>
+                <p class="project-description">
+                    Designed and developed multiple SaaS product websites and applications for enterprise clients in America.<br>
+                    Created comprehensive design systems, user flows, and interactive prototypes that enhanced user experience.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Figma</span>
+                    <span class="tech-tag">SaaS Design</span>
+                    <span class="tech-tag">Enterprise Solutions</span>
+                    <span class="tech-tag">Design Systems</span>
+                    <span class="tech-tag">User Experience</span>
+                </div>
+               <a href="https://www.figma.com/design/pQFkPj3oinV4mE1npsg88T/Website-showcase" class="project-link" target="_blank">View Portfolio →</a>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Design Specializations</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Design Services</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">User Research</span>
+                        <span class="skill-tag">Wireframing</span>
+                        <span class="skill-tag">Prototyping</span>
+                        <span class="skill-tag">Usability Testing</span>
+                        <span class="skill-tag">Design Systems</span>
+                        <span class="skill-tag">Material Design</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Industry Focus</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">SaaS Applications</span>
+                        <span class="skill-tag">FinTech Solutions</span>
+                        <span class="skill-tag">B2B Platforms</span>
+                        <span class="skill-tag">eCommerce</span>
+                        <span class="skill-tag">Mobile Apps</span>
+                        <span class="skill-tag">Landing Pages</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Portfolio & Links</h2>
+            <div class="portfolio-grid">
+               <a href="https://www.figma.com/design/pQFkPj3oinV4mE1npsg88T/Website-showcase" class="portfolio-item" target="_blank">
+                        <svg class="portfolio-icon" viewBox="0 0 24 24">
+                            <path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.015-4.49-4.491S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49S5.683 15.019 8.172 15.019c2.489 0 4.515 2.014 4.515 4.491S10.661 24 8.172 24zm0-7.509c-1.677 0-3.043 1.355-3.043 3.019s1.366 3.019 3.043 3.019 3.043-1.355 3.043-3.019-1.366-3.019-3.043-3.019zM19.995 15.019c-2.489 0-4.515-2.014-4.515-4.49s2.026-4.49 4.515-4.49 4.515 2.014 4.515 4.49-2.026 4.49-4.515 4.49zm0-7.509c-1.677 0-3.043 1.355-3.043 3.019s1.366 3.019 3.043 3.019 3.043-1.355 3.043-3.019-1.366-3.019-3.043-3.019z"/>
+                        </svg>
+                        <div class="portfolio-name">Website Showcase</div>
+                    </a>
+                                <a href="https://www.behance.net/guljarhos" class="portfolio-item" target="_blank">
+                        <svg class="portfolio-icon" viewBox="0 0 24 24">
+                            <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/>
+                        </svg>
+                        <div class="portfolio-name">Behance Portfolio</div>
+                    </a>
+                            <a href="https://dribbble.com/GuljarGlimpse" class="portfolio-item" target="_blank">
+                        <svg class="portfolio-icon" viewBox="0 0 24 24">
+                            <path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.816zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z"/>
+                        </svg>
+                        <div class="portfolio-name">Dribbble Shots</div>
+                    </a>
+                                <a href="https://contra.com/guljar_hosen_1521403g" class="portfolio-item" target="_blank">
+                        <svg class="portfolio-icon" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <div class="portfolio-name">Contra Profile</div>
+                    </a>
+                            <a href="https://github.com/GuljarGlimpse" class="portfolio-item" target="_blank">
+                            <svg class="portfolio-icon" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            <div class="portfolio-name">GitHub Projects</div>
+                        </a>
+                                            <a href="https://guljarhosen.com/" class="portfolio-item" target="_blank">
+                        <svg class="portfolio-icon" viewBox="0 0 24 24">
+                            <path d="M14.2 3.2l3.6 3.6-4.8 4.8-3.6-3.6 4.8-4.8zm-2.8 9.6l1.4 1.4c.39.39.39 1.02 0 1.41l-1.4 1.4c-.39.39-1.02.39-1.41 0l-1.4-1.4c-.39-.39-.39-1.02 0-1.41l1.4-1.4c.39-.39 1.02-.39 1.41 0zm7-7l1.8-1.8c.78-.78.78-2.05 0-2.83-.78-.78-2.05-.78-2.83 0l-1.8 1.8c-.78.78-.78 2.05 0 2.83.78.78 2.05.78 2.83 0z"/>
+                        </svg>
+                        <div class="portfolio-name">Personal Website</div>
+                    </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Achievements</h2>
+            <div class="achievements-list">
+                <div class="achievement-item">
+                    <div class="achievement-title">Featured Designer</div>
+                    Recognized on Behance for exceptional creativity
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-title">5+ Years Experience</div>
+                    Proven track record in UI/UX design
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-title">US Market Specialist</div>
+                    2+ years working with American companies
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-title">Full-Stack Capabilities</div>
+                    Design expertise with programming skills
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
